@@ -1,5 +1,8 @@
 from GDPR_object import *
 from Reddit_policy import *
+from compare import *
+from facebook_policy import *
+from twitter_Policy import *
 
 
 text = read_directory_contents('GDPR_Articles')
@@ -14,7 +17,6 @@ for Art in text:
 
 for art in GDPR_rules_objects:
     print(art.section_NC)
-
 
 
 print('Reading Twitter policy ....')
@@ -56,12 +58,4 @@ for Art in GDPR_rules_objects:
         Art.check_article('Reddit', True)
         print('True')
         get_similarity(same_topic, Art, 'Reddit')
-
-
-
-
-
-
-
-
 
